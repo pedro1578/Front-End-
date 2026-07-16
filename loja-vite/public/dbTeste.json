@@ -1,0 +1,58 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Básica",
+      "preco": 49.90,
+      "descricao": "Camiseta de algodão 100%, disponível em várias cores.",
+      "imagem": "/photos/camiseta/basica_preta.jpg",
+      "categoria": "Roupas",
+      "estoque": 15
+    },
+    {
+      "id": 2,
+      "nome": "Tênis Casual",
+      "preco": 189.90,
+      "descricao": "Conforto e estilo para o dia a dia.",
+      "imagem": "/photos/tenis/tenis1.webp",
+      "categoria": "Calçados",
+      "estoque": 8
+    },
+    {
+      "id": 3,
+      "nome": "Blusa de Frio",
+      "preco": 129.90,
+      "descricao": "Quente para tudo que voce precisa, confortavel para o dia a dia",
+      "imagem": "/photos/blusa/blusa1.webp",
+      "categoria": "Roupas",
+      "estoque": 5
+    },
+    {
+      "id": 4,
+      "nome": "Óculos de Sol",
+      "preco": 79.90,
+      "descricao": "Proteção UV400 com armação leve.",
+      "imagem": "/photos/oculos/images.jpg",
+      "categoria": "Acessórios",
+      "estoque": 20
+    },
+    {
+      "id": 5,
+      "nome": "Calça Jeans",
+      "preco": 119.90,
+      "descricao": "Corte slim moderno, confortável para uso diário.",
+      "imagem": "/photos/calca/calca1.webp",
+      "categoria": "Roupas",
+      "estoque": 12
+    },
+    {
+      "id": 6,
+      "nome": "Relógio Digital",
+      "preco": 249.90,
+      "descricao": "Design minimalista com funções de alarme e cronômetro.",
+      "imagem": "/photos/relogio/relogio1.jpg",
+      "categoria": "Acessórios",
+      "estoque": 3
+    }
+  ]
+}
