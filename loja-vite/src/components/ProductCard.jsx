@@ -5,15 +5,17 @@ export default function ProductCard({ produto }) {
   const navigate = useNavigate();
   const { adicionarItem } = useCart();
 
-  return (
-    <div style={{
-      backgroundColor: '#13131A',
-      border: '1px solid #1E1E2E',
-      borderRadius: '12px',
-      overflow: 'hidden',
-      transition: 'border-color 0.3s, box-shadow 0.3s',
-      cursor: 'pointer'
-    }}
+return (
+    <div
+      style={{
+        backgroundColor: '#13131A',
+        border: '1px solid #1E1E2E',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        transition: 'border-color 0.3s, box-shadow 0.3s',
+        cursor: 'pointer'
+      }}
+      onClick={() => navigate(`/produto/${produto.id}`)}
       onMouseEnter={e => {
         e.currentTarget.style.borderColor = '#6366F1';
         e.currentTarget.style.boxShadow = '0 0 20px rgba(99,102,241,0.15)';
@@ -23,8 +25,7 @@ export default function ProductCard({ produto }) {
         e.currentTarget.style.boxShadow = 'none';
       }}
     >
-      <div style={{ aspectRatio: '1', backgroundColor: '#27272A', overflow: 'hidden' }}
-        onClick={() => navigate(`/produto/${produto.id}`)}>
+      <div style={{ aspectRatio: '1', backgroundColor: '#27272A', overflow: 'hidden' }}>
         <img
           src={produto.imagem}
           alt={produto.nome}
@@ -35,7 +36,7 @@ export default function ProductCard({ produto }) {
       </div>
 
       <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        <div onClick={() => navigate(`/produto/${produto.id}`)}>
+        <div>
           <p style={{ color: '#52525B', fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>
             {produto.categoria}
           </p>
@@ -49,7 +50,10 @@ export default function ProductCard({ produto }) {
             R$ {produto.preco.toFixed(2)}
           </span>
           <button
-            onClick={() => adicionarItem(produto)}
+            onClick={e => {
+              e.stopPropagation();
+              adicionarItem(produto);
+            }}
             style={{
               backgroundColor: '#6366F1',
               color: 'white',
