@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProdutos } from "../services/api";
-import CardProduto from "../components/CardProduto";
+import ProductCard from "../components/ProductCard";
 
 export default function Home() {
     const [produtos, setProdutos] = useState([]);
@@ -10,7 +10,7 @@ export default function Home() {
 
     useEffect(() => {
         getProdutos()
-            .then(red => setProdutos(res.data))
+            .then(res => setProdutos(res.data))
             .catch(err => console.error('Erro ao buscar produto:', err))
             .finally(() => setLoading(false));
         
@@ -36,8 +36,8 @@ export default function Home() {
             </div>
 
             <div className="grid-produtos">
-                {produtoFiltrados.map(produtos => (
-                    <CardProduto key={produtos.id} produtos={produtos} />
+                {produtoFiltrados.map(produto => (
+                    <ProductCard key={produto.id} produto={produto} />
                 ))}
             </div>
         </div>
