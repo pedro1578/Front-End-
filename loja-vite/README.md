@@ -1,16 +1,85 @@
-# React + Vite
+# Loja Virtual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema de e-commerce desenvolvida em React com Vite, consumindo uma API REST simulada pelo JSON Server. Sistema criado para portifolio da vaga de emprego.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite
+- Tailwind CSS 4
+- Axios
+- React Router DOM
+- JSON Server
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Listagem de produtos consumindo API REST
+- Visualização individual de cada produto
+- Carrinho de compras funcional
+  - Adicionar e remover itens
+  - Alterar quantidade
+  - Resumo do pedido com total
+- Filtro por categoria
+- Busca por nome
+- Design dark mode responsivo
 
-## Expanding the ESLint configuration
+## Como rodar o projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Pré-requisitos
+
+- Node.js 18+
+- npm
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/pedro1578/Front-End-.git
+
+# Entre na pasta do projeto
+cd loja-vite
+
+# Instale as dependências
+npm install
+```
+
+### Rodando o projeto
+
+Você precisa de dois terminais abertos:
+
+**Terminal 1 — API:**
+```bash
+npx json-server public/dbTeste.json --port 3001
+```
+
+**Terminal 2 — Aplicação:**
+```bash
+npm run dev
+```
+
+Acesse em `http://localhost:5173`
+
+## Estrutura do projeto
+
+```
+src/
+  components/
+    Header.jsx
+    ProductCard.jsx
+  context/
+    CartContext.jsx
+  pages/
+    Home.jsx
+    ProductDetail.jsx
+    CartPage.jsx
+  services/
+    api.js
+  App.jsx
+  main.jsx
+public/
+  dbTeste.json
+```
+
+*-*-*-*-*-*-*-*-*-*-*-*-*
+
+Espero que gostem, e espero que esteja dentro de todos os requisitos pedidos.
