@@ -7,10 +7,10 @@ export function CartProvider({children}){
 
     function adicionarItem(produto) {
         setItens(prev => {
-            const existe = prev.find(i => i.id === pruduto.id);
+            const existe = prev.find(i => i.id === produto.id);
             if (existe) {
                 return prev.map(i =>
-                    i.id === produto.id ? {...i, quantidade: i.quantidade + 1} : 1
+                    i.id === produto.id ? {...i, quantidade: i.quantidade + 1} : i
                 );
             }
             return [...prev, {...produto, quantidade: 1 }];
